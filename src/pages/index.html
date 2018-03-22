@@ -8,7 +8,6 @@
       <li class="Outbound__item"><a class="Outbound__link" href="http://wordpress.org/support/profile/big-bagel"><span class="Outbound__icon fab fa-wordpress-simple" title="WordPress"></span> <span class="Outbound__text">WordPress</span></a></li>
     </ul>
   </div>
-  <div class="Site__waypoint" data-waypoint="home-bottom"></div>
 </section>
 
 <section id="Work" class="Site__section WorkSection" data-section="work" aria-labelledby="WorkTitle">
@@ -116,16 +115,17 @@
       </li>
     </ul>
   </div>
-  <div class="Site__waypoint" data-waypoint="work-bottom"></div>
 </section>
 
 <section id="Contact" class="Site__section ContactSection" data-section="contact" aria-labelledby="ContactTitle">
   <div class="ContactSection__container Site__container">
     <h1 id="ContactTitle" class="ContactSection__title">How to Reach Me</h1>
     <form class="Contact__form ContactForm" name="contact" method="POST" data-contact netlify>
+      <div class="ContactForm__flash" data-contact-flash></div>
+
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Name">Name:</label>
-        <input class="ContactForm__input" id="Name" type="text" name="name" placeholder="" required>
+        <input class="ContactForm__input" id="Name" type="text" name="name" required>
       </div>
 
       <div class="ContactForm__group">
@@ -135,11 +135,10 @@
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Message">Message:</label>
-        <textarea class="ContactForm__message" id="Message" name="message" rows="1" data-contact-message required></textarea>
+        <textarea class="ContactForm__input ContactForm__input--message" id="Message" name="message" rows="1" data-contact-message required></textarea>
       </div>
 
       <button class="ContactForm__submit" type="submit" data-contact-submit>Send</button>
     </form>
   </div>
-  <div class="Site__waypoint" data-waypoint="contact-bottom"></div>
 </section>

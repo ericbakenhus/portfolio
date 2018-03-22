@@ -10,6 +10,31 @@
     border-width: 0 0 2px;
   }
 
+  &__flash {
+    display: none;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 12px 8px;
+    overflow: hidden;
+    transition: height 0.2s ease;
+    margin-bottom: 16px;
+
+    &.is-open {
+      display: block;
+    }
+
+    &.is-success {
+      color: #beffd8;
+      border-color: #beffd8;
+    }
+
+    &.is-failure {
+      color: #ff8989;
+      border-color: #ff8989;
+    }
+  }
+
   &__label {
     display: block;
     color: #fff;
@@ -35,41 +60,31 @@
       color: #000;
       background-color: palette(orange);
     }
-  }
 
-  &__message {
-    color: palette(orange);
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    padding: 4px;
-    resize: none;
-
-    &:invalid {
-      box-shadow: none;
-    }
-
-    &::selection {
-      color: #000;
-      background-color: palette(orange);
+    &--message {
+      resize: none;
     }
   }
 
   &__submit {
     width: 100%;
-    background: palette(blue);
+    background: transparent;
     border: 2px solid #fff;
     color: #fff;
     text-transform: uppercase;
     font-family: font(oswald);
     padding: 12px 8px;
     font-size: 18px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
     cursor: pointer;
 
     @include haf() {
       background-color: #fff;
       color: palette(blue);
+    }
+
+    &:disabled {
+      opacity: 0.6;
     }
   }
 }
