@@ -64,7 +64,7 @@ export default function navInit() {
 
   let scroll = new SmoothScroll('[data-nav-link]',
   {
-    speed: 250,
-    easing: easeInOutQuad
+    speed: 500,
+    easing: 'easeInOutQuad'
   });
 }
