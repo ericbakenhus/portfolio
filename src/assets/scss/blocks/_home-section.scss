@@ -1,0 +1,56 @@
+%animation-base {
+  animation-name: home-fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+  .is-loading & {
+    animation: none;
+  }
+}
+
+.HomeSection {
+  background: palette(gray);
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  &__container {
+
+  }
+
+  &__title {
+    @extend %animation-base;
+    animation-delay: 0.2s;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+
+  &__tagline {
+    @extend %animation-base;
+    animation-delay: 0.3s;
+    font-size: 18px;
+    margin: 0 0 28px;
+
+    @include mq($from: m) {
+      font-size: 20px;
+    }
+  }
+
+  &__outbound {
+    @extend %animation-base;
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes home-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

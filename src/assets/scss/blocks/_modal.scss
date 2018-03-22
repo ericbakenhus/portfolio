@@ -1,0 +1,131 @@
+.Modal {
+
+  &.is-active {
+    .Modal__inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 16px;
+    padding: 16px;
+    border: 2px solid #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(25%);
+  }
+
+  &__left {
+    flex: 0 0 100%;
+    padding-right: 16px;
+    margin-bottom: 16px;
+
+    @include mq($from: m) {
+      flex: 0 0 60%;
+      padding-right: 16px;
+    }
+  }
+
+  &__right {
+    flex: 1 1 100%;
+
+    @include mq($from: m) {
+      flex: 1 1 40%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  &__image {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+
+    @include mq($from: m) {
+      display: block;
+    }
+  }
+
+  &__text {
+    color: #fff;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: font(oswald);
+    border: 2px solid #fff;
+    background-color: transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    @include haf() {
+      color: palette(gray);
+      background-color: #fff;
+    }
+  }
+
+  &__highlights {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 0 16px;
+
+    a {
+      color: #fff;
+
+      @include haf() {
+        color: palette(gray);
+        background: palette(orange);
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 18px;
+    margin: 0 4px;
+  }
+
+  &__close {
+    display: flex;
+    position: absolute;
+    top: -24px;
+    right: -16px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: font(oswald);
+    cursor: pointer;
+
+    @include mq($from: m) {
+      top: -24px;
+      right: -32px;
+    }
+
+    @include haf() {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+$_color-gray: #19191c;
+$_color-blue: #46576d;
+$_color-orange: #ffbf46;
+
+$palettes: (
+  gray: (
+    base:  $_color-gray,
+    light: lighten($_color-gray, 30%),
+    x-light: lighten($_color-gray, 60%),
+    xx-light: lighten($_color-gray, 80%)
+  ),
+  blue: (
+    base:  $_color-blue,
+    light: lighten($_color-blue, 30%),
+    dark:  darken($_color-blue, 30%)
+  ),
+  orange: (
+    base:  $_color-orange,
+    light: lighten($_color-orange, 30%),
+    dark:  darken($_color-orange, 30%)
+  )
+);
+
+@function palette($palette, $tone: base, $opacity: 1) {
+  @if $opacity == 1 {
+    @return map-get(map-get($palettes, $palette), $tone);
+  } @else {
+    @return rgba(map-get(map-get($palettes, $palette), $tone), $opacity);
+  }
+}

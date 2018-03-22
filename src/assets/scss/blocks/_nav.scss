@@ -1,0 +1,53 @@
+.Nav {
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0 0 16px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.1s ease;
+
+    &[data-transits='2'],
+    &[data-section='Work'] {
+      color: palette(gray);
+    }
+
+    @include haf('.is-active') {
+      @include mq($until: m) {
+        color: palette(orange);
+      }
+
+      @include mq($from: m) {
+        border-color: palette(orange);
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include mq($from: m) {
+      display: inline;
+    }
+  }
+
+  &__icon {
+    display: block;
+
+    @include mq($from: m) {
+      display: none;
+    }
+  }
+}

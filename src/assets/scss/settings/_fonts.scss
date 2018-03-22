@@ -1,0 +1,11 @@
+$_font-roboto: 'Roboto', sans-serif;
+$_font-oswald: 'Oswald', sans-serif;
+
+$fonts: (
+  roboto: $_font-roboto,
+  oswald: $_font-oswald
+);
+
+@function font($font) {
+  @return map-get($fonts, $font);
+}

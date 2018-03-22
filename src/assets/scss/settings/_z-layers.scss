@@ -1,0 +1,15 @@
+$z-layers: (
+  'modal':            2000,
+  'overlay':          1000,
+  'sidebar':           200,
+  'default':             1,
+  'bottomless-pit': -10000
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

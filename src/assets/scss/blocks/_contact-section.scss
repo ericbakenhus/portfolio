@@ -1,0 +1,10 @@
+.ContactSection {
+  background: palette(blue);
+
+  &__title {
+    margin: 0 0 48px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+}

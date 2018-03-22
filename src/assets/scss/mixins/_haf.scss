@@ -1,0 +1,13 @@
+@mixin haf($additional...) {
+  @if & {
+    &:hover, &:active, &:focus {
+      @content;
+    }
+
+    @each $class in $additional {
+      &#{$class} {
+        @content;
+      }
+    }
+  }
+}

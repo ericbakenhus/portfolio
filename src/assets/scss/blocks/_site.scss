@@ -1,0 +1,59 @@
+.Site {
+  &__modal {
+    z-index: z(modal);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, height 0s linear 0.2s;
+    background-color: transparent;
+
+    &.is-active {
+      height: 100%;
+      background-color: palette(gray, $opacity: 0.95);
+      transition: background-color 0.2s ease, height 0s linear 0s;
+    }
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px 44px 32px 0;
+
+    @include mq($from: m) {
+      padding-right: 96px;
+    }
+
+    @include mq($from: xl) {
+      padding-right: 0;
+    }
+
+    @media (max-height: 500px) {
+      min-height: 500px;
+    }
+  }
+
+  &__sidebar {
+    position: fixed;
+    top: 32px;
+    right: 18px;
+    z-index: z(sidebar);
+
+    @include mq($from: m) {
+      right: 32px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}

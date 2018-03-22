@@ -1,0 +1,18 @@
+.Header {
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    flex: 0 0 auto;
+    visibility: hidden;
+    margin: 0;
+  }
+
+  &__nav {
+    flex: 0 0 auto;
+  }
+}

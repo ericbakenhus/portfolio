@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+// Functions
+@import 'functions/math';
+@import 'functions/contrast';
+
+// Settings
+@import 'settings/palette';
+@import 'settings/fonts';
+@import 'settings/z-layers';
+
+$mq-breakpoints: (
+  s:  320px,
+  sm: 480px,
+  m:  640px,
+  ml: 800px,
+  l:  1024px,
+  xl: 1200px
+);
+
+// Mixins
+@import 'normalize';
+@import 'mq';
+@import 'mixins/haf';
+
+/* Normalize */
+@include normalize;
+
+@import 'blocks/site';
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/home-section';
+@import 'blocks/work-section';
+@import 'blocks/contact-section';
+@import 'blocks/example-grid';
+@import 'blocks/example';
+@import 'blocks/contact-form';
+@import 'blocks/modal';
+@import 'blocks/outbound';
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: font(roboto);
+
+  &.is-locked {
+    overflow: hidden !important;
+  }
+}
+
+button, input, optgroup, select, textarea {
+  font-family: font(roboto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: font(oswald);
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.u-color {
+  &-orange {
+    color: palette(orange);
+  }
+}

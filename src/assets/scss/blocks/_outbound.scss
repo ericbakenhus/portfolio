@@ -1,0 +1,47 @@
+.Outbound {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin: 0 8px 0 0;
+    overflow: hidden;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    @include mq($from: m) {
+      border-width: 2px;
+    }
+
+    @include haf {
+      background-color: #fff;
+      color: palette(gray);
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+  }
+
+  &__text {
+    display: none;
+
+    @include mq($from: m) {
+      margin-left: 4px;
+      display: inline;
+    }
+  }
+}

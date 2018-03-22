@@ -1,0 +1,32 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html lang="en" data-html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if title}}{{title}} | {{/if}}{{meta.title}}</title>
+    <meta content="{{meta.author}}" name="author"/>
+    <meta content="{{#if keywords}}{{keywords}}, {{/if}}{{meta.keywords}}" name="keywords"/>
+    <meta content="{{#if description}}{{description}}{{else}}{{meta.description}}{{/if}}" name="description"/>
+    {{#if canonical}}
+    <link href="{{meta.url}}{{canonical}}" rel="canonical"/>
+    <meta href="{{meta.url}}{{canonical}}" name="twitter:url" property="og:url"/>
+    {{/if}}
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body class="Site is-loading" data-body>
+
+    {{> sidebar}}
+
+    <main class="Site__main">
+      {{> body}}
+    </main>
+
+    {{> modals}}
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

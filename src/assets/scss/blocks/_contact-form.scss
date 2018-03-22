@@ -1,0 +1,75 @@
+.ContactForm {
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__group {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-width: 0 0 2px;
+  }
+
+  &__label {
+    display: block;
+    color: #fff;
+    margin-right: 4px;
+    width: 72px;
+    text-transform: uppercase;
+    font-family: font(oswald);
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    color: palette(orange);
+    padding: 4px;
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &::selection {
+      color: #000;
+      background-color: palette(orange);
+    }
+  }
+
+  &__message {
+    color: palette(orange);
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    resize: none;
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &::selection {
+      color: #000;
+      background-color: palette(orange);
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    background: palette(blue);
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: font(oswald);
+    padding: 12px 8px;
+    font-size: 18px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+    @include haf() {
+      background-color: #fff;
+      color: palette(blue);
+    }
+  }
+}
