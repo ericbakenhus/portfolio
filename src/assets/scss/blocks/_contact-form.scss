@@ -37,11 +37,16 @@
 
   &__label {
     display: block;
-    color: #fff;
+    color: palette(orange);
     margin-right: 4px;
     width: 72px;
     text-transform: uppercase;
     font-family: font(oswald);
+
+    &::selection {
+      color: #000;
+      background-color: palette(orange);
+    }
   }
 
   &__input {
@@ -49,8 +54,9 @@
     margin-bottom: 0;
     background-color: transparent;
     border: none;
-    color: palette(orange);
+    color: #fff;
     padding: 4px;
+    transition: background-color 0.2s ease;
 
     &:invalid {
       box-shadow: none;
@@ -58,7 +64,12 @@
 
     &::selection {
       color: #000;
-      background-color: palette(orange);
+      background-color: #fff;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     &--message {
