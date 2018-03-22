@@ -102,7 +102,16 @@ let webpackConfig = {
             loader: 'babel-loader'
           }
         ]
-      }
+      },
+      {
+        test: /.js$/,
+        include: /node_modules/,
+        use: [
+          {
+            loader: 'strip-sourcemap-loader'
+          }
+        ]
+      },
     ]
   }
 }
