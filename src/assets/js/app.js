@@ -5,6 +5,7 @@ import {addClass, removeClass} from './lib/class-helpers';
 import serialize from './lib/serialize';
 import autosize from 'autosize';
 import throttle from 'lodash/throttle';
+import axios from 'axios';
 
 const html = document.querySelector('[data-html]');
 const body = document.querySelector('[data-body]');
