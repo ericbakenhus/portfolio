@@ -6,6 +6,7 @@ import serialize from './lib/serialize';
 import autosize from 'autosize';
 import throttle from 'lodash/throttle';
 import axios from 'axios';
+import fontFaceObserver from 'fontfaceobserver';
 
 const html = document.querySelector('[data-html]');
 const body = document.querySelector('[data-body]');
@@ -116,6 +117,15 @@ const backwardTabModal = event => {
   }
 }
 
+let fontOswald = new fontFaceObserver('Oswald');
+let fontRoboto = new fontFaceObserver('Roboto');
+
+Promise.all([fontOswald.load(), fontRoboto.load()]).then(() => {
+  removeClass(body, 'is-loading');
+}, () => {
+  removeClass(body, 'is-loading');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', throttle(updateNav, 32));
   window.addEventListener('resize', throttle(updateNav, 500));
@@ -176,8 +186,4 @@ document.addEventListener('DOMContentLoaded', () => {
       isSubmitting = false;
     });
   });
-});
-
-window.addEventListener('load', () => {
-  removeClass(body, 'is-loading');
 });
