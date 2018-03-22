@@ -20,7 +20,9 @@
     "fontfaceobserver": "^2.0.13",
     "lodash": "^4.17.5",
     "normalize-scss": "^7.0.1",
-    "sass-mq": "^4.0.2"
+    "sass-mq": "^4.0.2",
+    "smooth-scroll": "^12.1.5",
+    "velocity-animate": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

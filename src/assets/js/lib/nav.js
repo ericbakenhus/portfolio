@@ -1,5 +1,6 @@
 import throttle from 'lodash/throttle';
 import {addClass, removeClass} from './class-helpers';
+import SmoothScroll from 'smooth-scroll/dist/js/smooth-scroll.polyfills';
 
 const sections = document.querySelectorAll('[data-section]');
 const navLinks = document.querySelectorAll('[data-nav-link]');
@@ -60,4 +61,10 @@ export default function navInit() {
   window.addEventListener('scroll', throttle(updateNav, 32));
   window.addEventListener('resize', throttle(updateNav, 500));
   updateNav();
+
+  let scroll = new SmoothScroll('[data-nav-link]',
+  {
+    speed: 250,
+    easing: easeInOutQuad
+  });
 }
