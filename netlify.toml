@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "https://eric.bakenhus.me/*"
-  to = "https://ericbakenhus.com/:splat"
+  to = "https://www.ericbakenhus.com/:splat"
   status = 301
   force = true
