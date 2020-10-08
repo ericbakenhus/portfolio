@@ -19,12 +19,9 @@ $mq-breakpoints: (
 );
 
 // Mixins
-@import 'normalize';
-@import 'mq';
+@import 'sanitize.css/sanitize';
+@import 'sass-mq/mq';
 @import 'mixins/haf';
-
-/* Normalize */
-@include normalize;
 
 @import 'blocks/site';
 @import 'blocks/header';

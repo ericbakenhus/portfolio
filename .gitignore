@@ -1,6 +1,55 @@
-.DS_Store
-node_modules
-npm-debug.log
-bower_components
+# Project
 dist
-*.swp
+
+# VS Code
+.vscode
+
+# Local History for Visual Studio Code
+.history/
+
+# NPM
+node_modules
+.npm
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# General OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
