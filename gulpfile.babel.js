@@ -12,7 +12,7 @@ import clean from './gulp/tasks/clean';
 import notifyBuild from './gulp/tasks/notify-build';
 import server from './gulp/tasks/server';
 
-import { production } from './gulp/util';
+import { production } from './gulp/config';
 
 if (production)
 	console.log(c.green.bold.underline('🚚 Production mode'));
