@@ -59,8 +59,14 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-.u-color {
-  &-orange {
-    color: palette(orange);
+.u {
+  &-hidden {
+    display: none !important;
+  }
+
+  &-color {
+    &-orange {
+      color: palette(orange);
+    }
   }
 }

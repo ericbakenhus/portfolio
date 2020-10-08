@@ -49,8 +49,9 @@
 <section id="Contact" class="Site__section ContactSection" data-section="contact" aria-labelledby="ContactTitle">
   <div class="ContactSection__container Site__container">
     <h1 id="ContactTitle" class="ContactSection__title">How to Reach Me</h1>
-    <form class="Contact__form ContactForm" name="contact" method="POST" data-contact netlify>
+    <form class="Contact__form ContactForm" name="contact" method="POST" data-contact netlify netlify-honeypot="hp">
       <div class="ContactForm__flash" data-contact-flash></div>
+      <input class="u-hidden" type="text" name="hp">
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Name">Name:</label>
