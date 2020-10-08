@@ -1,4 +1,5 @@
 import autoprefixer from 'autoprefixer';
+import pixelstorem from 'postcss-pixels-to-rem';
 import c from 'ansi-colors';
 import yargs from 'yargs';
 
@@ -55,7 +56,8 @@ const sass = {
 };
 
 const postcss = [
-		autoprefixer(),
+	autoprefixer(),
+	pixelstorem(),
 ];
 
 const webpack = {

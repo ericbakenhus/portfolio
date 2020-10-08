@@ -1,112 +1,24 @@
-<section id="tamu" class="Site__modal Modal" role="dialog" aria-labelledby="tamuTitle" aria-hidden="true" data-site-modal="tamu">
+{{#each examples}}
+<div id="{{ this.id }}" class="Site__modal Modal" role="dialog" aria-labelledby="{{ this.id }}Title" aria-hidden="true" data-site-modal="{{ this.id }}">
   <div class="Modal__inner">
     <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
     <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">Texas A&amp;M Univeristy</h1>
-      <p class="Modal__text">The main university website for Texas A&amp;M.</p>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Developer</p>
+      <h1 id="{{ this.id }}Title" class="Modal__title u-color-orange">{{ this.modal.title }}</h1>
+      {{#if this.modal.description}}<p class="Modal__text">{{ this.modal.description }}</p>{{/if}}
+      <p class="Modal__text"><span class="u-color-orange">Role:</span> {{ this.modal.role }}</p>
+      {{#if this.modal.highlights}}
       <p class="Modal__text u-color-orange">Highlights:</p>
       <ul class="Modal__highlights">
-        <li class="Modal__highlightsItem">Consumes and uses data from APIs and RSS feeds from accross campus</li>
-        <li class="Modal__highlightsItem">Cascade CMS</li>
+        {{#each this.modal.highlights}}
+        <li class="Modal__highlightsItem">{{{ this }}}</li>
+        {{/each}}
       </ul>
+      {{/if}}
     </div>
     <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/230/tamu.png" alt="Texas A&amp;M University website" />
-      <a class="Modal__link" href="https://www.tamu.edu/"><span class="Modal__icon fas fa-globe"></span> Live Site</a>
+      <img class="Modal__image" src="/assets/images/work/modals/{{#unless this.singleImage}}230/{{/unless}}{{ this.image }}" alt="" aria-hidden="true" />
+      {{#if this.link}}<a class="Modal__link" href="{{ this.link }}"><span class="Modal__icon fas fa-globe"></span> {{ this.linkText }}</a>{{/if}}
     </div>
   </div>
-</section>
-
-<section id="harvey" class="Site__modal Modal" role="dialog" aria-labelledby="" aria-hidden="true" data-site-modal="harvey">
-  <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
-    <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">Aggies Respond to Harvey</h1>
-      <p class="Modal__text">Microsite to highlight stories immediately after hurricane Harvey.</p>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Lead Developer</p>
-      <p class="Modal__text u-color-orange">Highlights:</p>
-      <ul class="Modal__highlights">
-        <li class="Modal__highlightsItem">Built in 6 hours</li>
-        <li class="Modal__highlightsItem">WordPress</li>
-        <li class="Modal__highlightsItem">Uses custom-built plugin to highjack the theme and use custom assets</li>
-        <li class="Modal__highlightsItem">Uses custom post type and taxonomy for individual stories</li>
-      </ul>
-    </div>
-    <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/230/harvey.png" alt="Aggies Respond to Harvey website" />
-      <a class="Modal__link" href="https://today.tamu.edu/aggies-hurricane-harvey-response/"><span class="Modal__icon fas fa-globe"></span> Live Site</a>
-    </div>
-  </div>
-</section>
-
-<section id="brandguide" class="Site__modal Modal" role="dialog" aria-labelledby="" aria-hidden="true" data-site-modal="brandguide">
-  <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
-    <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">Texas A&amp;M Brand Guide</h1>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Lead Developer</p>
-      <p class="Modal__text u-color-orange">Highlights:</p>
-      <ul class="Modal__highlights">
-        <li class="Modal__highlightsItem">Continuously deployed through a custom-built PHP script and Github webhooks</li>
-      </ul>
-    </div>
-    <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/230/brandguide.png" alt="Texas A&amp;M Brand Guide website" />
-      <a class="Modal__link" href="https://brandguide.tamu.edu/"><span class="Modal__icon fas fa-globe"></span> Live Site</a>
-    </div>
-  </div>
-</section>
-
-<section id="president" class="Site__modal Modal" role="dialog" aria-labelledby="" aria-hidden="true" data-site-modal="president">
-  <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
-    <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">Texas A&amp;M Office of the President</h1>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Lead Developer</p>
-      <p class="Modal__text u-color-orange">Highlights:</p>
-      <ul class="Modal__highlights">
-        <li class="Modal__highlightsItem">Cascade CMS</li>
-      </ul>
-    </div>
-    <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/230/president.png" alt="Texas A&amp;M Office of the President website" />
-      <a class="Modal__link" href="https://president.tamu.edu/"><span class="Modal__icon fas fa-globe"></span> Live Site</a>
-    </div>
-  </div>
-</section>
-
-<section id="12thman" class="Site__modal Modal" role="dialog" aria-labelledby="" aria-hidden="true" data-site-modal="12thman">
-  <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
-    <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">The 12th Man</h1>
-      <p class="Modal__text">Microsite highlighting the use of "The 12th Man" at Texas A&amp;M.</p>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Lead Developer</p>
-    </div>
-    <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/230/12thman.png" alt="12th Man website" />
-      <a class="Modal__link" href="https://12thman.tamu.edu/"><span class="Modal__icon fas fa-globe"></span> Live Site</a>
-    </div>
-  </div>
-</section>
-
-<section id="360vr" class="Site__modal Modal" role="dialog" aria-labelledby="" aria-hidden="true" data-site-modal="360vr">
-  <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
-    <div class="Modal__left">
-      <h1 id="tamuTitle" class="Modal__title u-color-orange">Texas A&amp;M Global Initiatives 360 Video App</h1>
-      <p class="Modal__text">The main university website for Texas A&amp;M.</p>
-      <p class="Modal__text"><span class="u-color-orange">Role:</span> Lead Developer</p>
-      <p class="Modal__text u-color-orange">Highlights:</p>
-      <ul class="Modal__highlights">
-        <li class="Modal__highlightsItem">Used at A&amp;M's SXSW exibit booth</li>
-        <li class="Modal__highlightsItem">Built with <a href="https://aframe.io/">A-Frame</a></li>
-        <li class="Modal__highlightsItem">Uses a service worker and IndexedDB to store all assests on devices</li>
-      </ul>
-    </div>
-    <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/360.gif" alt="Texas A&M University Global Initiatives 360 video app" />
-    </div>
-  </div>
-</section>
+</div>
+{{/each}}

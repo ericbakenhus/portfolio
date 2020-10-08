@@ -1,5 +1,5 @@
-<section id="Home" class="Site__section HomeSection" data-section="home" aria-labelledby="HomeTitle">
-  <div class="HomeSection__container Site__container">
+<section id="Home" class="Site__section -fullHeight HomeSection" data-section="home" aria-labelledby="HomeTitle">
+  <div class="HomeSection__container Site__container -fullHeight">
     <h1 id="HomeTitle" class="HomeSection__title">Eric Bakenhus</h1>
     <p class="HomeSection__tagline">A 100% human full-stack web developer. Definately not three hyperintelligent corgis in a trench coat.</>
     <ul class="HomeSection__outbound Outbound">
@@ -12,109 +12,38 @@
 
 <section id="Work" class="Site__section WorkSection" data-section="work" aria-labelledby="WorkTitle">
   <div class="WorkSection__container Site__container">
-    <h1 id="WorkTitle" class="WorkSection__title">What I Do</h1>
+    <h1 id="WorkTitle" class="WorkSection__title">Stuff I've Built</h1>
 
     <ul class="WorkSection__examples ExampleGrid">
+      {{#each examples}}
       <li class="ExampleGrid__item Example">
         <div class="Example__inner">
-          <a class="Example__link" href="#tamu" data-modal-show="tamu">
+          <a class="Example__link" href="#{{ this.id }}" data-modal-show="{{ this.id }}">
             <img class="Example__image"
-              srcset="/assets/images/work/320/tamu.png 320w,
-                      /assets/images/work/430/tamu.png 430w,
-                      /assets/images/work/530/tamu.png 530w"
-              sizes="(min-width: 64em) 312px,
-                     (min-width: 40em) 420px,
-                     530px"
-              src="/assets/images/work/530/tamu.png"
-              alt="Texas A&amp;M University website"
+              {{#if this.singleImage}}
+                src="/assets/images/work/{{ this.image }}"
+              {{else}}
+                srcset="/assets/images/work/320/{{ this.image }} 320w,
+                  /assets/images/work/430/{{ this.image }} 430w,
+                  /assets/images/work/530/{{ this.image }} 530w"
+                sizes="(min-width: 64em) 312px,
+                  (min-width: 40em) 420px,
+                  530px"
+                src="/assets/images/work/530/{{ this.image }}"
+              {{/if}}
+              alt=""
+              aria-hidden="true"
             />
-            <span class="Example__text">View Project</span>
+            <span class="Example__title">{{ this.title }}</span>
+            <span class="Example__text">View Details</span>
           </a>
         </div>
       </li>
-
-      <li class="ExampleGrid__item Example">
-        <div class="Example__inner">
-          <a class="Example__link" href="#harvey" data-modal-show="harvey">
-            <img class="Example__image"
-              srcset="/assets/images/work/320/harvey.png 320w,
-                      /assets/images/work/430/harvey.png 430w,
-                      /assets/images/work/530/harvey.png 530w"
-              sizes="(min-width: 64em) 312px,
-                     (min-width: 40em) 420px,
-                     530px"
-              src="/assets/images/work/530/harvey.png"
-              alt="Aggies Respond to Harvey website"
-            />
-            <span class="Example__text">View Project</span>
-          </a>
-        </div>
-      </li>
-
-      <li class="ExampleGrid__item Example">
-        <div class="Example__inner">
-          <a class="Example__link" href="#bandguide" data-modal-show="brandguide">
-            <img class="Example__image"
-              srcset="/assets/images/work/320/brandguide.png 320w,
-                      /assets/images/work/430/brandguide.png 430w,
-                      /assets/images/work/530/brandguide.png 530w"
-              sizes="(min-width: 64em) 312px,
-                     (min-width: 40em) 420px,
-                     530px"
-              src="/assets/images/work/530/brandguide.png"
-              alt="Texas A&amp;M University Brand Guide website"
-            />
-            <span class="Example__text">View Project</span>
-          </a>
-        </div>
-      </li>
-
-      <li class="ExampleGrid__item Example">
-        <div class="Example__inner">
-          <a class="Example__link" href="#president" data-modal-show="president">
-            <img class="Example__image"
-              srcset="/assets/images/work/320/president.png 320w,
-                      /assets/images/work/430/president.png 430w,
-                      /assets/images/work/530/president.png 530w"
-              sizes="(min-width: 64em) 312px,
-                     (min-width: 40em) 420px,
-                     530px"
-              src="/assets/images/work/530/president.png"
-              alt="Texas A&amp;M University Office of the President website"
-            />
-            <span class="Example__text">View Project</span>
-          </a>
-        </div>
-      </li>
-
-      <li class="ExampleGrid__item Example">
-        <div class="Example__inner">
-          <a class="Example__link" href="#12thman" data-modal-show="12thman">
-            <img class="Example__image"
-              srcset="/assets/images/work/320/12thman.png 320w,
-                      /assets/images/work/430/12thman.png 430w,
-                      /assets/images/work/530/12thman.png 530w"
-              sizes="(min-width: 64em) 312px,
-                     (min-width: 40em) 420px,
-                     530px"
-              src="/assets/images/work/530/12thman.png"
-              alt="Texas A&amp;M University 12th Man website"
-            />
-            <span class="Example__text">View Project</span>
-          </a>
-        </div>
-      </li>
-
-      <li class="ExampleGrid__item Example">
-        <div class="Example__inner">
-          <a class="Example__link" href="#360vr" data-modal-show="360vr">
-            <img class="Example__image" src="/assets/images/work/360.gif" alt="Texas A&amp;M University Global Initiatives 360 video app" />
-            <span class="Example__text">View Project</span>
-          </a>
-        </div>
-      </li>
+      {{/each}}
     </ul>
   </div>
+
+  {{> modals}}
 </section>
 
 <section id="Contact" class="Site__section ContactSection" data-section="contact" aria-labelledby="ContactTitle">

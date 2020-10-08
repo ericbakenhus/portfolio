@@ -1,0 +1,94 @@
+[
+    {
+        "id": "tamu",
+        "image": "tamu.png",
+        "title": "tamu.edu",
+        "link": "https://www.tamu.edu",
+        "linkText": "Live Site",
+        "modal": {
+            "title": "Texas A&M University",
+            "description": "The main website for Texas A&M University.",
+            "role": "Developer",
+            "highlights": [
+                "Cascade CMS",
+                "Consumes and uses data from APIs and RSS feeds from across campus"
+            ]
+        }
+    },
+    {
+        "id": "harvey",
+        "image": "harvey.png",
+        "title": "Aggies Respond to Harvey",
+        "link": "https://web.archive.org/web/20190104141035/https://today.tamu.edu/aggies-hurricane-harvey-response/",
+        "linkText": "Archived Site",
+        "modal": {
+            "title": "Aggies Respond to Harvey",
+            "description": "Microsite to highlight stories immediately after hurricane Harvey.",
+            "role": "Lead Developer",
+            "highlights": [
+                "WordPress",
+                "Built in a day"
+            ]
+        }
+    },
+    {
+        "id": "brandguide",
+        "image": "brandguide.png",
+        "title": "TAMU Brand Guide site",
+        "link": "https://brandguide.tamu.edu",
+        "linkText": "Live Site",
+        "modal": {
+            "title": "Texas A&M Brand Guide",
+            "description": "The brand guide for Texas A&M University.",
+            "role": "Lead Developer",
+            "highlights": [
+                "Static site deployed through Github webhook and PHP script"
+            ]
+        }
+    },
+    {
+        "id": "president",
+        "image": "president.png",
+        "title": "TAMU President's site",
+        "link": "https://president.tamu.edu",
+        "linkText": "Live Site",
+        "modal": {
+            "title": "Texas A&M Office of the President",
+            "role": "Lead Developer",
+            "highlights": [
+                "Cascade CMS"
+            ]
+        }
+    },
+    {
+        "id": "12thman",
+        "image": "12thman.png",
+        "title": "12th Man site",
+        "link": "https://12thman.tamu.edu",
+        "linkText": "Live Site",
+        "modal": {
+            "title": "The 12th Man",
+            "description": "Microsite highlighting the use of \"The 12th Man\" at Texas A&M.",
+            "role": "Lead Developer",
+            "highlights": [
+
+            ]
+        }
+    },
+    {
+        "id": "360vr",
+        "image": "360.gif",
+        "title": "TAMU Global Initiatives 360 video app",
+        "singleImage": true,
+        "modal": {
+            "title": "Texas A&M Global Initiatives 360 Video App",
+            "description": "The main university website for Texas A&M.",
+            "role": "Lead Developer",
+            "highlights": [
+                "Used at A&M's SXSW exibit booth",
+                "Built with <a href=\"https://aframe.io/\">A-Frame</a>",
+                "Uses a service worker and IndexedDB to store all assests on devices"
+            ]
+        }
+    }
+]

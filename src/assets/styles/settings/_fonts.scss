@@ -1,9 +1,9 @@
-$_font-roboto: 'Roboto', sans-serif;
-$_font-oswald: 'Oswald', sans-serif;
+$_font-oswald: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
+$_font-public: 'Public Sans', sans-serif;
 
 $fonts: (
-  roboto: $_font-roboto,
-  oswald: $_font-oswald
+  body: $_font-public,
+  heading: $_font-oswald
 );
 
 @function font($font) {

@@ -23,8 +23,11 @@
   &__section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    padding: 32px 44px 32px 0;
+    padding: 64px 44px 64px 0;
+
+    &.-fullHeight {
+      min-height: max(100vh, 500px);
+    }
 
     @include mq($from: m) {
       padding-right: 96px;
@@ -32,10 +35,6 @@
 
     @include mq($from: xl) {
       padding-right: 0;
-    }
-
-    @media (max-height: 500px) {
-      min-height: 500px;
     }
   }
 

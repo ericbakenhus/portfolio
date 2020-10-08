@@ -1,5 +1,5 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "portfolio-website",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.babel.js",
@@ -29,6 +29,7 @@
     "node-notifier": "^8.0.0",
     "panini": "^1.7.1",
     "postcss": "^8.1.0",
+    "postcss-pixels-to-rem": "^0.8.0",
     "sass": "^1.26.10",
     "webpack": "^4.44.1",
     "webpack-stream": "^6.1.0",

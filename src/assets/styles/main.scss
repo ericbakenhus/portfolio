@@ -40,7 +40,7 @@ $mq-breakpoints: (
 }
 
 html, body {
-  font-family: font(roboto);
+  font-family: font(body);
 
   &.is-locked {
     overflow: hidden !important;
@@ -48,11 +48,11 @@ html, body {
 }
 
 button, input, optgroup, select, textarea {
-  font-family: font(roboto);
+  font-family: font(body);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: font(oswald);
+  font-family: font(heading);
 }
 
 img {
