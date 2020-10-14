@@ -26,7 +26,7 @@
     padding: 64px 44px 64px 0;
 
     &.-fullHeight {
-      min-height: max(100vh, 500px);
+      min-height: max(100vh, 400px);
     }
 
     @include mq($from: m) {

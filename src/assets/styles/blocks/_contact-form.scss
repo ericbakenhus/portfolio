@@ -5,9 +5,8 @@
   &__group {
     margin-bottom: 16px;
     display: flex;
+    flex-direction: column;
     align-items: baseline;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-width: 0 0 2px;
   }
 
   &__flash {
@@ -30,8 +29,8 @@
     }
 
     &.is-failure {
-      color: #ff8989;
-      border-color: #ff8989;
+      color: #ffbaba;
+      border-color: #ffbaba;
     }
   }
 
@@ -54,13 +53,19 @@
     font-size: 16px;
     margin-bottom: 0;
     background-color: transparent;
-    border: none;
+    border: 2px solid #fff;
     color: #fff;
     padding: 4px;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 
-    &:invalid {
+    .is-submitted &:invalid,
+    &.is-touched:invalid {
       box-shadow: none;
+      border-color: #ffbaba;
+
+      & + .ContactForm__error {
+        display: block;
+      }
     }
 
     &::selection {
@@ -70,12 +75,19 @@
 
     &:focus {
       outline: none;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
     }
 
     &--message {
       resize: none;
     }
+  }
+
+  &__error {
+    display: none;
+    color: #ffbaba;
+    font-size: 14px;
   }
 
   &__submit {

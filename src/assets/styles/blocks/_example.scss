@@ -33,6 +33,11 @@
         transition-delay: 0s;
       }
     }
+
+    &:focus {
+      box-shadow: 0 0 4px 2px palette(orange);
+      outline: none;
+    }
   }
 
   &__image {

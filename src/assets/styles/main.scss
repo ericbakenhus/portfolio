@@ -22,8 +22,10 @@ $mq-breakpoints: (
 @import 'sanitize.css/sanitize';
 @import 'sass-mq/mq';
 @import 'mixins/haf';
+@import 'mixins/vh';
 
 @import 'blocks/site';
+@import 'blocks/skipnav';
 @import 'blocks/header';
 @import 'blocks/nav';
 @import 'blocks/home-section';
@@ -41,6 +43,7 @@ $mq-breakpoints: (
 
 html, body {
   font-family: font(body);
+  scroll-behavior: smooth;
 
   &.is-locked {
     overflow: hidden !important;

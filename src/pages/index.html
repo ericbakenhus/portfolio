@@ -1,18 +1,20 @@
-<section id="Home" class="Site__section -fullHeight HomeSection" data-section="home" aria-labelledby="HomeTitle">
+<div id="Home" class="Site__section -fullHeight HomeSection" data-section="home">
   <div class="HomeSection__container Site__container">
     <h1 id="HomeTitle" class="HomeSection__title">Eric Bakenhus</h1>
     <p class="HomeSection__tagline">A 100% human full-stack web developer. Definately not three hyperintelligent corgis in a trench coat.</>
-    <ul class="HomeSection__outbound Outbound">
-      <li class="Outbound__item"><a class="Outbound__link" href="http://stackoverflow.com/users/1991862/bigbagel"><span class="Outbound__icon fab fa-stack-overflow" title="Stack Overflow"></span> <span class="Outbound__text">Stack Overflow</span></a></li>
-      <li class="Outbound__item"><a class="Outbound__link" href="https://github.com/BigBagel"><span class="Outbound__icon fab fa-github" title="Github"></span> <span class="Outbound__text">Github</span></a></li>
-      <li class="Outbound__item"><a class="Outbound__link" href="http://wordpress.org/support/profile/big-bagel"><span class="Outbound__icon fab fa-wordpress-simple" title="WordPress"></span> <span class="Outbound__text">WordPress</span></a></li>
-    </ul>
+    <nav aria-label="external profiles">
+      <ul class="HomeSection__outbound Outbound">
+        <li class="Outbound__item"><a class="Outbound__link" href="http://stackoverflow.com/users/1991862/bigbagel"><span class="Outbound__icon fab fa-stack-overflow fa-fw"></span> <span class="Outbound__text">Stack Overflow</span></a></li>
+        <li class="Outbound__item"><a class="Outbound__link" href="https://github.com/BigBagel"><span class="Outbound__icon fab fa-github fa-fw"></span> <span class="Outbound__text">Github</span></a></li>
+        <li class="Outbound__item"><a class="Outbound__link" href="http://wordpress.org/support/profile/big-bagel"><span class="Outbound__icon fab fa-wordpress-simple fa-fw"></span> <span class="Outbound__text">WordPress</span></a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</div>
 
 <section id="Work" class="Site__section -fullHeight WorkSection" data-section="work" aria-labelledby="WorkTitle">
   <div class="WorkSection__container Site__container">
-    <h1 id="WorkTitle" class="WorkSection__title">Stuff I've Built</h1>
+    <h2 id="WorkTitle" class="WorkSection__title">Stuff I've Built</h2>
 
     <ul class="WorkSection__examples ExampleGrid">
       {{#each examples}}
@@ -48,24 +50,27 @@
 
 <section id="Contact" class="Site__section -fullHeight ContactSection" data-section="contact" aria-labelledby="ContactTitle">
   <div class="ContactSection__container Site__container">
-    <h1 id="ContactTitle" class="ContactSection__title">How to Reach Me</h1>
-    <form class="Contact__form ContactForm" name="contact" method="POST" data-contact netlify netlify-honeypot="hp">
+    <h2 id="ContactTitle" class="ContactSection__title">How to Reach Me</h2>
+    <form class="Contact__form ContactForm" name="contact" method="POST" data-contact data-netlify data-netlify-honeypot="hp">
       <div class="ContactForm__flash" data-contact-flash></div>
       <input class="u-hidden" type="text" name="hp">
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Name">Name:</label>
         <input class="ContactForm__input" id="Name" type="text" name="name" required>
+        <span class="ContactForm__error">Name is required.</span>
       </div>
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Email">Email:</label>
         <input class="ContactForm__input" id="Email" type="email" name="email" required>
+        <span class="ContactForm__error">Email must be a valid email address.</span>
       </div>
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Message">Message:</label>
-        <textarea class="ContactForm__input ContactForm__input--message" id="Message" name="message" rows="1" data-contact-message required></textarea>
+        <textarea class="ContactForm__input ContactForm__input--message" id="Message" name="message" rows="6" data-contact-message required></textarea>
+        <span class="ContactForm__error">Message is required.</span>
       </div>
 
       <button class="ContactForm__submit" type="submit" data-contact-submit>Send</button>

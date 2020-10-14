@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en" data-html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{#if title}}{{title}} | {{/if}}{{meta.title}}</title>
-    <meta content="{{meta.author}}" name="author"/>
-    <meta content="{{#if keywords}}{{keywords}}, {{/if}}{{meta.keywords}}" name="keywords"/>
-    <meta content="{{#if description}}{{description}}{{else}}{{meta.description}}{{/if}}" name="description"/>
+    <meta content="{{meta.author}}" name="author">
+    <meta content="{{#if keywords}}{{keywords}}, {{/if}}{{meta.keywords}}" name="keywords">
+    <meta content="{{#if description}}{{description}}{{else}}{{meta.description}}{{/if}}" name="description">
     {{#if canonical}}
-    <link href="{{meta.url}}{{canonical}}" rel="canonical"/>
-    <meta href="{{meta.url}}{{canonical}}" name="twitter:url" property="og:url"/>
+    <link href="{{meta.url}}{{canonical}}" rel="canonical">
+    <meta href="{{meta.url}}{{canonical}}" name="twitter:url" property="og:url">
     {{/if}}
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/assets/styles/main.css">
   </head>
   <body class="Site" data-body>
 
+    {{> skipnav}}
+
     {{> sidebar}}
 
-    <main class="Site__main">
+    <main id="Main" class="Site__main">
       {{> body}}
     </main>
 

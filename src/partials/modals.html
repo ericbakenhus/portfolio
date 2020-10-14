@@ -1,9 +1,8 @@
 {{#each examples}}
-<div id="{{ this.id }}" class="Site__modal Modal" role="dialog" aria-labelledby="{{ this.id }}Title" aria-hidden="true" data-site-modal="{{ this.id }}">
+<div id="{{ this.id }}" class="Site__modal Modal" role="dialog" aria-modal="true" aria-labelledby="{{ this.id }}Title" data-site-modal="{{ this.id }}">
   <div class="Modal__inner">
-    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
     <div class="Modal__left">
-      <h1 id="{{ this.id }}Title" class="Modal__title u-color-orange">{{ this.modal.title }}</h1>
+      <h2 id="{{ this.id }}Title" class="Modal__title u-color-orange">{{ this.modal.title }}</h2>
       {{#if this.modal.description}}<p class="Modal__text">{{ this.modal.description }}</p>{{/if}}
       <p class="Modal__text"><span class="u-color-orange">Role:</span> {{ this.modal.role }}</p>
       {{#if this.modal.highlights}}
@@ -16,9 +15,10 @@
       {{/if}}
     </div>
     <div class="Modal__right">
-      <img class="Modal__image" src="/assets/images/work/modals/{{#unless this.singleImage}}230/{{/unless}}{{ this.image }}" alt="" aria-hidden="true" />
+      <img class="Modal__image" src="/assets/images/work/{{#unless this.singleImage}}modals/230/{{/unless}}{{ this.image }}" alt="" aria-hidden="true" />
       {{#if this.link}}<a class="Modal__link" href="{{ this.link }}"><span class="Modal__icon fas fa-globe"></span> {{ this.linkText }}</a>{{/if}}
     </div>
+    <button class="Modal__close" data-close-modal>Close <span class="Modal__icon far fa-times-circle"></span></button>
   </div>
 </div>
 {{/each}}

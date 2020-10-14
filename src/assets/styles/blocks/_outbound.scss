@@ -37,7 +37,9 @@
   }
 
   &__text {
-    display: none;
+    @include mq($until: m) {
+      @include vh;
+    }
 
     @include mq($from: m) {
       margin-left: 4px;

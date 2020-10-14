@@ -1,12 +1,11 @@
-import 'es6-promise/auto';
-import './lib/nodelist-foreach-polyfill';
-import './lib/font-awesome-loader';
-import modalsInit from './lib/modals';
-import navInit from './lib/nav';
-import contactFormInit from './lib/contact-form';
+import initIcons from './lib/font-awesome-loader';
+import initModals from './lib/modals';
+import initNav from './lib/nav';
+import initForm from './lib/contact-form';
 
 document.addEventListener('DOMContentLoaded', () => {
-  navInit();
-  modalsInit();
-  contactFormInit();
+  initNav();
+  initIcons();
+  initModals();
+  initForm();
 });

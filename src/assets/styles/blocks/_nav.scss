@@ -1,5 +1,7 @@
 .Nav {
   &__menu {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -17,14 +19,31 @@
     color: #fff;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease, color 0.1s ease;
+    transition: border-color 0.2s ease;
 
-    &[data-transits='2'],
-    &[data-section='Work'] {
+    @include mq($from: m) {
+      &[data-cross] {
+        color: transparent;
+        background-clip: text;
+      }
+
+      @for $i from 1 through 99 {
+        &[data-section="Home"][data-cross="#{$i}"] {
+          background-image: linear-gradient(#fff $i * 1%, #000 $i * 1%);
+        }
+
+        &[data-section="Work"][data-cross="#{$i}"] {
+          background-image: linear-gradient(#000 $i * 1%, #fff $i * 1%);
+        }
+      }
+    }
+
+    &[data-section="Work"] {
       color: palette(gray);
     }
 
-    @include haf('.is-active') {
+    &:hover,
+    &.is-active {
       @include mq($until: m) {
         color: palette(orange);
       }
@@ -33,18 +52,25 @@
         border-color: palette(orange);
       }
     }
+
+    &:focus {
+      outline: 2px solid;
+    }
   }
 
   &__text {
-    display: none;
+    @include mq($until: m) {
+      @include vh;
+    }
 
     @include mq($from: m) {
-      display: inline;
+      display: inline-block;
     }
   }
 
   &__icon {
-    display: block;
+    display: inline-block;
+    margin: 0 8px 0 0;
 
     @include mq($from: m) {
       display: none;
