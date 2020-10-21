@@ -1,21 +1,36 @@
 .Skipnav {
-    color: #fff;
+  text-align: center;
+  color: #fff;
+  padding: 16px;
+  margin: 0;
+  // border: 2px solid #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: z(skipnav);
+  transform: translate(0, -100%);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: palette(blue);
+
+  &:focus {
+    transform: translate(0, 0);
+  }
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  @include mq($from: m) {
     padding: 8px 16px;
-    margin: 8px 0 0;
-    border: 2px solid #fff;
-    position: absolute;
+    width: auto;
     left: 50%;
-    top: 0;
-    transform: translate(-50%, calc(-100% - 16px));
-    transition: all 0.2s ease;
-    text-decoration: none;
+    transform: translate(-50%, -100%);
 
     &:focus {
-        transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
     }
-
-    &:hover {
-        background: #fff;
-        color: #000;
-    }
+  }
 }

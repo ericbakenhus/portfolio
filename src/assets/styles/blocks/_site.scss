@@ -1,4 +1,6 @@
 .Site {
+  background: #fff;
+
   &__modal {
     z-index: z(modal);
     display: flex;
@@ -23,14 +25,13 @@
   &__section {
     display: flex;
     align-items: center;
-    padding: 64px 44px 64px 0;
-
-    &.-fullHeight {
-      min-height: max(100vh, 400px);
-    }
+    padding: 64px 0;
+    min-height: max(100vh, 400px);
 
     @include mq($from: m) {
       padding-right: 96px;
+      // min-height: max(calc(100vh - 16px), 400px);
+      // margin: 8px;
     }
 
     @include mq($from: xl) {
@@ -39,20 +40,23 @@
   }
 
   &__sidebar {
-    position: fixed;
+    position: absolute;
     top: 32px;
-    right: 18px;
+    left: 32px;
     z-index: z(sidebar);
 
     @include mq($from: m) {
+      position: fixed;
+      top: 32px;
       right: 32px;
+      left: auto;
     }
   }
 
   &__container {
     width: 100%;
     max-width: 1024px;
-    padding: 0 16px;
+    padding: 0 32px;
     margin: 0 auto;
   }
 }

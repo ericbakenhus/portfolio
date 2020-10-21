@@ -60,8 +60,11 @@
 
     .is-submitted &:invalid,
     &.is-touched:invalid {
-      box-shadow: none;
       border-color: #ffbaba;
+
+      &:focus {
+        border-color: palette(gray);
+      }
 
       & + .ContactForm__error {
         display: block;
@@ -69,14 +72,21 @@
     }
 
     &::selection {
-      color: #000;
+      color: palette(gray);
       background-color: #fff;
     }
 
     &:focus {
       outline: none;
-      background-color: rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
+      background-color: #fff;
+      border-color: palette(gray);
+      color: palette(gray);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
+
+      &::selection {
+        background-color: palette(gray);
+        color: #fff;
+      }
     }
 
     &--message {

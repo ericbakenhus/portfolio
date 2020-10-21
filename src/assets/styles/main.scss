@@ -50,6 +50,10 @@ html, body {
   }
 }
 
+nav li:before {
+  position: absolute;
+}
+
 button, input, optgroup, select, textarea {
   font-family: font(body);
 }

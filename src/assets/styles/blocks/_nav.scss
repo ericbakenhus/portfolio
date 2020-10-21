@@ -1,17 +1,28 @@
 .Nav {
   &__menu {
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
+    flex-direction: row;
+    align-items: center;
     padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include mq($from: m) {
+      background: transparent;
+      flex-direction: column;
+      width: auto;
+    }
   }
 
   &__item {
-    margin: 0 0 16px 0;
+    margin: 0 32px 0 0;
+
+    @include mq($from: m) {
+      margin: 0 0 16px 0;
+    }
 
     &:last-child {
-      margin-bottom: 0;
+      margin: 0;
     }
   }
 
@@ -21,18 +32,20 @@
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
 
-    @include mq($from: m) {
-      &[data-cross] {
-        color: transparent;
-        background-clip: text;
-      }
+    &[data-cross] {
+      color: transparent;
+      background-clip: text;
+    }
 
+    @include mq($from: m) {
       @for $i from 1 through 99 {
         &[data-section="Home"][data-cross="#{$i}"] {
+          color: transparent;
           background-image: linear-gradient(#fff $i * 1%, #000 $i * 1%);
         }
 
         &[data-section="Work"][data-cross="#{$i}"] {
+          color: transparent;
           background-image: linear-gradient(#000 $i * 1%, #fff $i * 1%);
         }
       }
@@ -42,38 +55,18 @@
       color: palette(gray);
     }
 
-    &:hover,
     &.is-active {
-      @include mq($until: m) {
-        color: palette(orange);
-      }
-
       @include mq($from: m) {
         border-color: palette(orange);
       }
     }
 
+    &:hover {
+      border-color: palette(orange);
+    }
+
     &:focus {
       outline: 2px solid;
-    }
-  }
-
-  &__text {
-    @include mq($until: m) {
-      @include vh;
-    }
-
-    @include mq($from: m) {
-      display: inline-block;
-    }
-  }
-
-  &__icon {
-    display: inline-block;
-    margin: 0 8px 0 0;
-
-    @include mq($from: m) {
-      display: none;
     }
   }
 }
