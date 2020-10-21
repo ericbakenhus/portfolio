@@ -16,15 +16,11 @@
   &__link {
     display: flex;
     align-items: center;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     color: #fff;
     text-decoration: none;
     padding: 12px;
     transition: background-color 0.2s ease, color 0.2s ease;
-
-    @include mq($from: m) {
-      border-width: 2px;
-    }
 
     @include haf {
       background-color: #fff;

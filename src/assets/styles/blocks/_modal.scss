@@ -112,17 +112,17 @@
     font-family: font(heading);
     cursor: pointer;
 
-    @include mq($from: m) {
-      top: -24px;
-      right: -32px;
-    }
-
     @include haf() {
       text-decoration: underline;
     }
 
     &:focus {
       outline: 1px dotted #fff;
+    }
+
+    @include mq($from: m) {
+      top: -24px;
+      right: -32px;
     }
   }
 }

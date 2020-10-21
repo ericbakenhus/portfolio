@@ -17,12 +17,12 @@
   &__item {
     margin: 0 32px 0 0;
 
-    @include mq($from: m) {
-      margin: 0 0 16px 0;
-    }
-
     &:last-child {
       margin: 0;
+    }
+
+    @include mq($from: m) {
+      margin: 0 0 16px 0;
     }
   }
 
@@ -35,20 +35,6 @@
     &[data-cross] {
       color: transparent;
       background-clip: text;
-    }
-
-    @include mq($from: m) {
-      @for $i from 1 through 99 {
-        &[data-section="Home"][data-cross="#{$i}"] {
-          color: transparent;
-          background-image: linear-gradient(#fff $i * 1%, #000 $i * 1%);
-        }
-
-        &[data-section="Work"][data-cross="#{$i}"] {
-          color: transparent;
-          background-image: linear-gradient(#000 $i * 1%, #fff $i * 1%);
-        }
-      }
     }
 
     &[data-section="Work"] {
@@ -67,6 +53,20 @@
 
     &:focus {
       outline: 2px solid;
+    }
+
+    @include mq($from: m) {
+      @for $i from 1 through 99 {
+        &[data-section="Home"][data-cross="#{$i}"] {
+          color: transparent;
+          background-image: linear-gradient(#fff $i * 1%, #000 $i * 1%);
+        }
+
+        &[data-section="Work"][data-cross="#{$i}"] {
+          color: transparent;
+          background-image: linear-gradient(#000 $i * 1%, #fff $i * 1%);
+        }
+      }
     }
   }
 }
