@@ -11,13 +11,15 @@
     width: 100%;
     height: 100%;
     background: palette(gray);
-    border-radius: 6px;
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+    transition: outline 0.2s ease;
 
     @include haf() {
+      outline: 2px solid palette(gray);
+      outline-offset: 2px;
+
       .Example__image {
         filter: grayscale(100%) blur(1px);
-        opacity: 0.4;
+        opacity: 0.2;
         transition-delay: 0s;
       }
 
@@ -32,11 +34,6 @@
         transform: translate(-50%, -65%);
         transition-delay: 0s;
       }
-    }
-
-    &:focus {
-      box-shadow: 0 0 4px 2px palette(orange);
-      outline: none;
     }
   }
 
@@ -57,7 +54,6 @@
     left: 50%;
     transform: translate(-50%, -25%);
     backface-visibility: hidden;
-    text-shadow: 2px 2px 2px palette(gray, $opacity: 0.9);
     font-size: 24px;
     font-family: font(heading);
     color: #fff;

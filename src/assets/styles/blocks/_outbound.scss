@@ -6,7 +6,6 @@
 
   &__item {
     margin: 0 8px 0 0;
-    overflow: hidden;
 
     &:last-child {
       margin-right: 0;
@@ -20,11 +19,13 @@
     color: #fff;
     text-decoration: none;
     padding: 12px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease;
 
     @include haf {
       background-color: #fff;
       color: palette(gray);
+      outline: 2px solid #fff;
+      outline-offset: 2px;
     }
   }
 

@@ -52,25 +52,25 @@
   <div class="ContactSection__container Site__container">
     <h2 id="ContactTitle" class="ContactSection__title">How to Reach Me</h2>
     <form class="Contact__form ContactForm" name="contact" method="POST" data-contact data-netlify data-netlify-honeypot="hp">
-      <div class="ContactForm__flash" data-contact-flash></div>
-      <input class="u-hidden" type="text" name="hp">
+      <div class="ContactForm__flash" role="alert" aria-atomic="true" data-contact-flash></div>
+      <input class="u-hidden" type="text" name="hp" aria-hidden="true" aria-label="hidden field, please leave blank">
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Name">Name:</label>
-        <input class="ContactForm__input" id="Name" type="text" name="name" required>
-        <span class="ContactForm__error">Name is required.</span>
+        <input class="ContactForm__input" id="Name" type="text" name="name" aria-describedby="NameError" required>
+        <span class="ContactForm__error" id="NameError">Name is required.</span>
       </div>
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Email">Email:</label>
-        <input class="ContactForm__input" id="Email" type="email" name="email" required>
-        <span class="ContactForm__error">Email must be a valid email address.</span>
+        <input class="ContactForm__input" id="Email" type="email" name="email" aria-describedby="EmailError" required>
+        <span class="ContactForm__error" id="EmailError">Email must be a valid email address (email@example.com).</span>
       </div>
 
       <div class="ContactForm__group">
         <label class="ContactForm__label" for="Message">Message:</label>
-        <textarea class="ContactForm__input ContactForm__input--message" id="Message" name="message" rows="6" data-contact-message required></textarea>
-        <span class="ContactForm__error">Message is required.</span>
+        <textarea class="ContactForm__input ContactForm__input--message" id="Message" name="message" rows="6" aria-describedby="ContactFormError" data-contact-message required></textarea>
+        <span class="ContactForm__error" id="ContactFormError">Message is required.</span>
       </div>
 
       <button class="ContactForm__submit" type="submit" data-contact-submit>Send</button>

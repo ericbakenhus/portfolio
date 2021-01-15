@@ -109,12 +109,14 @@
     font-family: font(heading);
     padding: 12px 8px;
     font-size: 18px;
-    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
 
     @include haf() {
       background-color: #fff;
-      color: palette(blue);
+      color: palette(gray);
+      outline: 2px solid #fff;
+      outline-offset: 2px;
     }
 
     &:disabled {
