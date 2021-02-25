@@ -26,7 +26,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "node-notifier": "^8.0.0",
+    "node-notifier": "^8.0.1",
     "panini": "^1.7.1",
     "postcss": "^8.1.0",
     "postcss-pixels-to-rem": "^0.8.0",
