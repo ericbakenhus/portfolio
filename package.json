@@ -40,7 +40,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "fastdom": "^1.0.9",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.21",
     "sanitize.css": "^12.0.1",
     "sass-mq": "^5.0.1"
   }
