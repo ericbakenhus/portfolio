@@ -28,7 +28,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "node-notifier": "^8.0.1",
     "panini": "^1.7.1",
-    "postcss": "^8.1.0",
+    "postcss": "^8.2.10",
     "postcss-pixels-to-rem": "^0.8.0",
     "sass": "^1.26.10",
     "webpack": "^4.44.1",
