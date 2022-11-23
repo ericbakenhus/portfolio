@@ -16,7 +16,7 @@
     "ansi-colors": "^4.1.1",
     "autoprefixer": "^10.0.0",
     "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
